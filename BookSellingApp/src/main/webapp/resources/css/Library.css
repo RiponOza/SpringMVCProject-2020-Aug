@@ -1,0 +1,55 @@
+
+
+
+#header{
+	color: white;
+	background-color: #388534;
+	height: 120px;
+	font-family: sans-serif;
+	font-size: 40px;
+
+	padding-top: 30px;
+	padding-left: 30px;
+	overflow: auto;
+
+}
+
+#div-main{
+	margin-top: 30px;
+	width: 70%;
+}
+
+#div-book-panel{
+	background-color: #e3f0e1;
+	width: 200px;
+	padding-left: 25px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	float: left;
+	margin-left: 30px;
+	margin-bottom: 30px;
+}
+
+#div-image{
+	
+	width: 200px;
+	
+}
+#div-book-info{
+	font-family: sans-serif;
+	color: black;
+	font-size: 15px;
+}
+
+#image-book{
+	height : 200px;
+	width: 150px;
+}
+
+#div-book-info{
+	margin-top: 20px;
+}
+
+#header-book{
+	font-size: 20px;
+}

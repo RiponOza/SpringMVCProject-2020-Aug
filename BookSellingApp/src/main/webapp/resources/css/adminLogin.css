@@ -1,0 +1,29 @@
+#header{
+	color: white;
+	background-color: #388534;
+	height: 120px;
+	font-family: sans-serif;
+	font-size: 40px;
+
+	padding-top: 30px;
+	padding-left: 30px;
+	overflow: auto;
+	border-radius: 0px;
+	margin-bottom: 50px;
+}
+
+
+
+#form-header{
+	background-color: gray;
+	color: white;
+	font-size: 25px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	width: 70%;
+}
+
+#table{
+	width: 70%;
+	margin-top: 10px;
+}
