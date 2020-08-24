@@ -18,7 +18,7 @@
 	<h2 id="header-1" class="jumbotron">Book Selling Website</h2>
 	
 	<c:if test="${user ne null}">
-		<div>
+		<div align="center" style="color:red;font-size: 20px;">
 			<span>${status}</span>
 		</div>
 	</c:if>
@@ -35,7 +35,7 @@
 				<input type="radio" name="gender" class="form-check-input" value="male"> Male <br>
 				<input type="radio" name="gender" class="form-check-input" value="female"> Female<br>
 				<input type="radio" name="gender" class="form-check-input" value="other"> Other<br>
-				<input type="submit" name="login" class="btn btn-primary">
+				<input type="submit" value="submit" class="btn btn-primary">
 			</form>
 		</div>
 

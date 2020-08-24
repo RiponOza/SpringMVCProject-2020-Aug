@@ -8,21 +8,21 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name = "User", schema = "db007")
+@Table(name = "user", schema = "db007")
 public class User {
 	
 	@Id
 	@Column(name = "email")
 	private String email;
-	@Column(name = "fname")
+	@Column(name = "fname", nullable = false)
 	private String fname;
-	@Column(name = "lname")
+	@Column(name = "lname", nullable = false)
 	private String lname;
-	@Column(name = "mobile")
+	@Column(name = "mobile", nullable = false)
 	private String mobile;
-	@Column(name = "password")
+	@Column(name = "password", nullable = false)
 	private String password;
-	@Column(name = "gender")
+	@Column(name = "gender", nullable = false)
 	private String gender;
 
 	//getters and setters

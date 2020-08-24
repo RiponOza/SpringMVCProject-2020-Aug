@@ -17,17 +17,21 @@
 	<h2 id="header-1" class="jumbotron">Add Book Panel</h2>
 
 	<c:if test="${status ne null}">
-		<div align="center" style="color:red;font-size:20px;">${status}</div>
+		<div align="center" style="color:red;font-size:25px;padding:10px;">${status}</div>
+	</c:if>
+	<c:if test="${imageStatus ne null}">
+		<div align="center" style="color:red;font-size:25px;padding:10px;">${imageStatus}</div>
 	</c:if>
 
 	<div id="div-main" class="container">
 			<div id="div-form">
-			<form action="addbook" method="POST" class="form-group">
+			<form action="addbook" method="POST" class="form-group" enctype="multipart/form-data">
 				<input type="text" name="Id" class="form-control" placeholder="Enter book id" autocomplete="off" required>
 				<input type="text" name="bname" class="form-control" placeholder="Enter book name" autocomplete="off" required>
 				<input type="text" name="author" class="form-control" placeholder="Enter author name" autocomplete="off" required>
 				<input type="text" name="price" class="form-control" placeholder="Enter book price" autocomplete="off" required>
 				<input type="text" name="totalpage" class="form-control" placeholder="Enter total page count" autocomplete="off" required>
+				<input type="file" name="BookImage">
 				<input type="submit" name="Add Book" class="btn btn-primary btn-lg">
 			</form>
 		</div>
