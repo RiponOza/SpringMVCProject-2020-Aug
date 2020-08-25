@@ -17,7 +17,7 @@
 <body>
 	<h2 id="header-1" class="jumbotron">Book Selling Website</h2>
 	
-	<c:if test="${user ne null}">
+	<c:if test="${status ne null}">
 		<div align="center" style="color:red;font-size: 20px;">
 			<span>${status}</span>
 		</div>
@@ -29,7 +29,7 @@
 				<input type="text" name="fname" class="form-control" placeholder="Enter your first name" required>
 				<input type="text" name="lname" class="form-control" placeholder="Enter your last name" required>
 				<input type="email" name="email" class="form-control" placeholder="Enter your email" required>
-				<input type="text" name="phone" class="form-control" placeholder="Enter your mobile numbe" required>
+				<input type="text" name="phone" class="form-control" placeholder="Enter your mobile number" required>
 				<input type="password" name="password" class="form-control" placeholder="Enter your password" required>
 				<input type="password" name="confirm-password" class="form-control" placeholder="Enter your password again" required>
 				<input type="radio" name="gender" class="form-check-input" value="male"> Male <br>

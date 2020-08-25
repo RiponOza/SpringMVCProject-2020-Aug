@@ -14,14 +14,19 @@ public class User {
 	@Id
 	@Column(name = "email")
 	private String email;
+	
 	@Column(name = "fname", nullable = false)
 	private String fname;
+	
 	@Column(name = "lname", nullable = false)
 	private String lname;
+	
 	@Column(name = "mobile", nullable = false)
 	private String mobile;
+	
 	@Column(name = "password", nullable = false)
 	private String password;
+	
 	@Column(name = "gender", nullable = false)
 	private String gender;
 

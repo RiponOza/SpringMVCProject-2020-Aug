@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,20 +12,25 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/index.css" />">
 </head>
-<style>
-	
-</style>
+
 <body>
 	<h2 id="header-1" class="jumbotron">Book Selling Website</h2>
+	
+	
+	
 	<div id="div-main" class="container">
 		<div id="div-1">
-			<form id="form-1" action="Library.html" method="POST">
-				<input id="email" type="email" name="email" placeholder="Enter your email" required><br>
+			<c:if test="${status ne null}">
+				<div align="center" style="color:red;font-size: 20px;margin-bottom: 30px;"><span>${status}</span></div>
+			</c:if>
+			<form id="form-1" action="userlogin" method="POST">
+				<input id="email" type="email" name="email" placeholder="Enter your email" autocomplete="off"  required><br>
 				<input id="password" type="password" name="password" placeholder="Enter your password" required><br>
 				<input id="submit" type="submit" name="login">
 			</form><br>
 			<a id="forget-password" href="">Forget password</a><br>
-			<a id="create-account" href="register">Create account</a>
+			<a id="create-account" href="register">Create account</a><br>
+			<a id="admin-panel" href="admin">admin-panel</a><br>
 		</div>
 
 		<div id="div-2" class=>

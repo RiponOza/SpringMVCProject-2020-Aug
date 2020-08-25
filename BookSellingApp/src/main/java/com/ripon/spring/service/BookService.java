@@ -106,7 +106,7 @@ public class BookService {
 	
 	
 	public List<Book> getAllBook() {
-		return null;
+		return dao.getAllBookRecord();
 	}
 
 	

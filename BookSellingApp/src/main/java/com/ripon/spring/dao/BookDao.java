@@ -19,6 +19,8 @@ public class BookDao {
 	@Autowired
 	private HibernateTemplate hibernateTemplate;
 	
+	
+	
 	//checks for availability of entry of book in database
 	public boolean isRecordAvailable(Book book) {  
 		if(hibernateTemplate.get(Book.class, book.getId())==null) {
@@ -26,6 +28,8 @@ public class BookDao {
 		}
 		return true;
 	}
+	
+	
 	
 	// insert value in db
 	@Transactional
@@ -39,6 +43,8 @@ public class BookDao {
 		}
 	}
 	
+	
+	
 	// delete value from database
 	@Transactional
 	public boolean deleteBookRecord(Book book) {
@@ -51,6 +57,9 @@ public class BookDao {
 		}
 	}
 	
+	
+	
+	
 	// updates existing record from database
 	@Transactional
 	public boolean updateBookRecord(Book book) {
@@ -62,6 +71,9 @@ public class BookDao {
 			return false;
 		}
 	}
+	
+	
+	
 	
 	// get book record using Book Id, returns null if not available
 	public Book getBookRecord(long id ) {
@@ -78,8 +90,10 @@ public class BookDao {
 		}
 	}
 	
+	
+	
 	// returns all book records present in database as List object
-	public List<Book> getAllBookRecord(Book book) {
+	public List<Book> getAllBookRecord() {
 		try {
 			Session session =  hibernateTemplate.getSessionFactory().openSession();
 			Query query = session.createQuery("FROM Book");

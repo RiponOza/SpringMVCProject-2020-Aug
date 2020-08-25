@@ -74,6 +74,10 @@ public class BookController {
 		return mv;
 	}
 
+	
+	
+	
+	
 	// Deletes book record from database
 	@RequestMapping(value = "deletebook", method = RequestMethod.POST)
 	public ModelAndView deleteBook(@RequestParam(name = "Id") String bookId) {

@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored = "false"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,6 +17,7 @@
 	<h2 id="header" class="jumbotron">Payment Page</h2>
 	<div id="table" class="container">
 
+		<form id="form-1">
 		<table class="table table-bordered table-hover ">
 			<div id="table-header"><span>Book Information</span></div>
 			<tr>
@@ -22,19 +26,19 @@
 			</tr>
 			<tr>
 				<td>Book Name</td>
-				<td></td>
+				<td>${sessionScope.book_name}</td>
 			</tr>
 			<tr>
 				<td>Price (INR)</td>
-				<td></td>
+				<td>${sessionScope.price}</td>
 			</tr>
 			<tr>
 				<td>Author</td>
-				<td></td>
+				<td>${sessionScope.author}</td>
 			</tr>
 			<tr>
 				<td>Total-Page</td>
-				<td></td>
+				<td>${sessionScope.page}</td>
 			</tr>
 			<tr>
 				<td>Publication</td>
@@ -50,6 +54,7 @@
 			</tr>
 		</table>
 		<div id="button" align="center"><a href=""><button class="btn btn-primary btn-lg">Buy</button></a></div>
+		</form>
 	</div>
 	<div id="footer"></div>
 </body>

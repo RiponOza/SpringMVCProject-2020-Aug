@@ -24,22 +24,32 @@ public class UserDao {
 		this.hibernateTemplate = hibernateTemplate;
 	}
 	
-	//It inserts User values into database
+	
+	/** It returns the details of a user **/
+	public User getUser(String id) {
+		return hibernateTemplate.get(User.class, id);
+	}
+	
+	
+	
+	
+	/**
+	 * It inserts User values into database. Returs true if success and returns
+	 * false if exception occurs.
+	 **/
 	@Transactional
-	public int insertUserRecord(User user) {
+	public boolean insertUserRecord(User user) {
 		try {
 			hibernateTemplate.save(user);
-			return 1;
-		}
-		catch(DataIntegrityViolationException e) {
+			return true;
+		} catch (Exception e) {
 			e.printStackTrace();
-			return 2;
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			return 0;
+			return false;
 		}
 	}
+	
+	
+	
 	
 	//It returns all the user info as a List object
 	public List<User> getAllUserRecord() {
